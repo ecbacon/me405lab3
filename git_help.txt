@@ -1,4 +1,36 @@
-Committing:
+#####################
+# STARTING A PROJECT
+#####################
+
+#initializing a repo in current dir
+
+	git init
+
+#forking: FIRST FORK PROJECT ON GITHUB
+#will save entire project to new directory of same name in pwd
+
+	git clone https://github.com/<user>/<proj-to-fork>
+
+#save original repo (the one you just forked) as "upstream", not "origin"
+
+	git remote add upstream https://github.com/<user>/<proj-to-fork>
+
+#update from upstream, without touching your files
+	
+	git fetch upstream
+
+#merge upstream changes into your files
+
+	git merge upstream/master
+
+#check out repo
+
+	git checkout <repo>
+
+
+############
+# UPLOADING:
+############
 
 # stage a file, ie add it to list that are to be committed
 
@@ -20,4 +52,10 @@ Committing:
 
 	git remote add origin https://github.com/<user>/<repo-name>
 
+###############
+# DOWNLOADING:
+###############
 
+#pull master project from online
+
+	git pull origin master
