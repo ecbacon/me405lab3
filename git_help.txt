@@ -59,3 +59,8 @@
 #pull master project from online
 
 	git pull origin master
+
+#pull all branches of project too
+
+	git fetch
+	git checkout <branch-name>
