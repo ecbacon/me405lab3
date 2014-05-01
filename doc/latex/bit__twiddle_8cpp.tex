@@ -1,0 +1,88 @@
+\hypertarget{bit__twiddle_8cpp}{\section{bit\-\_\-twiddle.\-cpp \-File \-Reference}
+\label{bit__twiddle_8cpp}\index{bit\-\_\-twiddle.\-cpp@{bit\-\_\-twiddle.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}bit\-\_\-twiddle.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{bit__twiddle_8cpp_a8f47afd328b9103ecea63326fa561f54}{set\-\_\-bit} (volatile uint8\-\_\-t \&reg, uint8\-\_\-t bit)
+\begin{DoxyCompactList}\small\item\em \-This function sets/unsets bits. \end{DoxyCompactList}\item 
+\hypertarget{bit__twiddle_8cpp_a097cb6b0f6dd02469773d5b537192b09}{void {\bfseries set\-\_\-bit} (volatile uint8\-\_\-t \&reg, uint8\-\_\-t bit, uint8\-\_\-t value)}\label{bit__twiddle_8cpp_a097cb6b0f6dd02469773d5b537192b09}
+
+\item 
+void \hyperlink{bit__twiddle_8cpp_a28bba0b75bbf58ff168b8330ff19a9cc}{clear\-\_\-and\-\_\-set} (volatile uint8\-\_\-t \&reg, uint8\-\_\-t bit)
+\begin{DoxyCompactList}\small\item\em \-This function clears a reg and sets one bit high. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This file contains a function to set / set low a bit
+
+\-Revisions\-: \begin{DoxyItemize}
+\item 4-\/16-\/2014 written by \-E\-B\end{DoxyItemize}
+\-License\-: \-This file is copyright 2012 by \-J\-R \-Ridgely and released under the \-Lesser \-G\-N\-U \-Public \-License, version 2. \-It intended for educational use only, but its use is not limited thereto. 
+
+\-Definition in file \hyperlink{bit__twiddle_8cpp_source}{bit\-\_\-twiddle.\-cpp}.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{bit__twiddle_8cpp_a28bba0b75bbf58ff168b8330ff19a9cc}{\index{bit\-\_\-twiddle.\-cpp@{bit\-\_\-twiddle.\-cpp}!clear\-\_\-and\-\_\-set@{clear\-\_\-and\-\_\-set}}
+\index{clear\-\_\-and\-\_\-set@{clear\-\_\-and\-\_\-set}!bit_twiddle.cpp@{bit\-\_\-twiddle.\-cpp}}
+\subsubsection[{clear\-\_\-and\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf clear\-\_\-and\-\_\-set} (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\-\_\-t \&}]{reg, }
+\item[{uint8\-\_\-t}]{bit}
+\end{DoxyParamCaption}
+)}}\label{bit__twiddle_8cpp_a28bba0b75bbf58ff168b8330ff19a9cc}
+
+
+\-This function clears a reg and sets one bit high. 
+
+set all bits low, then set specified bit high
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em reg} & the register to change \\
+\hline
+{\em bit} & the bit to set high \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 64 of file bit\-\_\-twiddle.\-cpp.
+
+
+
+\-Referenced by task\-\_\-motor\-::run().
+
+\hypertarget{bit__twiddle_8cpp_a8f47afd328b9103ecea63326fa561f54}{\index{bit\-\_\-twiddle.\-cpp@{bit\-\_\-twiddle.\-cpp}!set\-\_\-bit@{set\-\_\-bit}}
+\index{set\-\_\-bit@{set\-\_\-bit}!bit_twiddle.cpp@{bit\-\_\-twiddle.\-cpp}}
+\subsubsection[{set\-\_\-bit}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-bit} (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\-\_\-t \&}]{reg, }
+\item[{uint8\-\_\-t}]{bit}
+\end{DoxyParamCaption}
+)}}\label{bit__twiddle_8cpp_a8f47afd328b9103ecea63326fa561f54}
+
+
+\-This function sets/unsets bits. 
+
+set the specified register's specified bit to the specified value
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em reg} & \-A register to change \\
+\hline
+{\em bit} & which bit in register to change \\
+\hline
+{\em value} & what value to change it to (0 or high) \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 35 of file bit\-\_\-twiddle.\-cpp.
+
+
+
+\-Referenced by motor\-::brake(), motor\-::motor(), task\-\_\-motor\-::run(), and motor\-::set\-\_\-power().
+

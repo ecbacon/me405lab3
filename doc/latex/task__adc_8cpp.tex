@@ -1,0 +1,58 @@
+\hypertarget{task__adc_8cpp}{\section{task\-\_\-adc.\-cpp \-File \-Reference}
+\label{task__adc_8cpp}\index{task\-\_\-adc.\-cpp@{task\-\_\-adc.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}frt\-\_\-text\-\_\-queue.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}task\-\_\-adc.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}bit\-\_\-twiddle.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}shares.\-h\char`\"{}}\*
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{task__adc_8cpp_a9dd11e117cf5affe7c055399a46ff8d9}{shared\-\_\-adc0\-\_\-state}
+\item 
+\hypertarget{task__adc_8cpp_a46ffde29d70504cfb0d02d58c5a28303}{shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{task__adc_8cpp_a46ffde29d70504cfb0d02d58c5a28303}{shared\-\_\-adc1\-\_\-state}}\label{task__adc_8cpp_a46ffde29d70504cfb0d02d58c5a28303}
+
+\begin{DoxyCompactList}\small\item\em state of adc0 \end{DoxyCompactList}\item 
+\hypertarget{task__adc_8cpp_a73d353a8c3af19ff597f903ce0885031}{shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{task__adc_8cpp_a73d353a8c3af19ff597f903ce0885031}{shared\-\_\-adc2\-\_\-state}}\label{task__adc_8cpp_a73d353a8c3af19ff597f903ce0885031}
+
+\begin{DoxyCompactList}\small\item\em state of adc1 \end{DoxyCompactList}\item 
+\hypertarget{task__adc_8cpp_a48039483bfbf1c64d7d4d0ae48929d47}{shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{task__adc_8cpp_a48039483bfbf1c64d7d4d0ae48929d47}{shared\-\_\-adc3\-\_\-state}}\label{task__adc_8cpp_a48039483bfbf1c64d7d4d0ae48929d47}
+
+\begin{DoxyCompactList}\small\item\em state of adc2 \end{DoxyCompactList}\item 
+\hypertarget{task__adc_8cpp_af39bbda9c236c19714643a2d5b3f658a}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{task__adc_8cpp_af39bbda9c236c19714643a2d5b3f658a}{shared\-\_\-adc0\-\_\-value}}\label{task__adc_8cpp_af39bbda9c236c19714643a2d5b3f658a}
+
+\begin{DoxyCompactList}\small\item\em state of adc3 \end{DoxyCompactList}\item 
+\hypertarget{task__adc_8cpp_af1e83f6c130fa15c4773d544c5d4da00}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{task__adc_8cpp_af1e83f6c130fa15c4773d544c5d4da00}{shared\-\_\-adc1\-\_\-value}}\label{task__adc_8cpp_af1e83f6c130fa15c4773d544c5d4da00}
+
+\begin{DoxyCompactList}\small\item\em reading from adc0 \end{DoxyCompactList}\item 
+\hypertarget{task__adc_8cpp_ae600b494e1bf49c9903d60ab15d1fb35}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{task__adc_8cpp_ae600b494e1bf49c9903d60ab15d1fb35}{shared\-\_\-adc2\-\_\-value}}\label{task__adc_8cpp_ae600b494e1bf49c9903d60ab15d1fb35}
+
+\begin{DoxyCompactList}\small\item\em reading from adc1 \end{DoxyCompactList}\item 
+\hypertarget{task__adc_8cpp_a83378a66e1c6d03fc2c68b028a52fb2c}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{task__adc_8cpp_a83378a66e1c6d03fc2c68b028a52fb2c}{shared\-\_\-adc3\-\_\-value}}\label{task__adc_8cpp_a83378a66e1c6d03fc2c68b028a52fb2c}
+
+\begin{DoxyCompactList}\small\item\em reading from adc2 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+this file defines an adc manager task.
+
+\-Revisions\-: \begin{DoxyItemize}
+\item 04-\/23-\/2014 \-E\-B created this by copying from \hyperlink{task__motor_8cpp}{task\-\_\-motor.\-cpp}\end{DoxyItemize}
+\-License\-: \-This file was found fully written on the back of a napkin at dennys. \-As such, it must be considered in the public domain. \-J\-R \-Ridgely has claimed he wrote this software, and demands to license it under the lesser \-G\-N\-U pubic license, but his lawyers are not as good as my lawyers at lawying, so he will not win. 
+
+\-Definition in file \hyperlink{task__adc_8cpp_source}{task\-\_\-adc.\-cpp}.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{task__adc_8cpp_a9dd11e117cf5affe7c055399a46ff8d9}{\index{task\-\_\-adc.\-cpp@{task\-\_\-adc.\-cpp}!shared\-\_\-adc0\-\_\-state@{shared\-\_\-adc0\-\_\-state}}
+\index{shared\-\_\-adc0\-\_\-state@{shared\-\_\-adc0\-\_\-state}!task_adc.cpp@{task\-\_\-adc.\-cpp}}
+\subsubsection[{shared\-\_\-adc0\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<${\bf adc\-\_\-state\-\_\-enum}$>$ {\bf shared\-\_\-adc0\-\_\-state}}}\label{task__adc_8cpp_a9dd11e117cf5affe7c055399a46ff8d9}
+\-These are the shared data for communicating \-A\-D\-C data to and fro among tasks. 
+
+\-Definition at line 35 of file task\-\_\-adc.\-cpp.
+
+
+
+\-Referenced by task\-\_\-adc\-::run().
+

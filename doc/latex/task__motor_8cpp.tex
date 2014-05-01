@@ -1,0 +1,94 @@
+\hypertarget{task__motor_8cpp}{\section{task\-\_\-motor.\-cpp \-File \-Reference}
+\label{task__motor_8cpp}\index{task\-\_\-motor.\-cpp@{task\-\_\-motor.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}frt\-\_\-text\-\_\-queue.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}task\-\_\-motor.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}bit\-\_\-twiddle.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}shares.\-h\char`\"{}}\*
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+shared\-\_\-data$<$ \hyperlink{shares_8h_a691d837edb37a31cc16afc22cebba884}{motor\-\_\-state\-\_\-enum} $>$ \hyperlink{task__motor_8cpp_a32f6a081a2279bd21982b533187ead6e}{shared\-\_\-motor1\-\_\-state}
+\item 
+shared\-\_\-data$<$ \hyperlink{shares_8h_a691d837edb37a31cc16afc22cebba884}{motor\-\_\-state\-\_\-enum} $>$ \hyperlink{task__motor_8cpp_ab9df4d33643276af8b1b0f7a852cb1c6}{shared\-\_\-motor2\-\_\-state}
+\begin{DoxyCompactList}\small\item\em state of motor 1 \end{DoxyCompactList}\item 
+shared\-\_\-data$<$ int16\-\_\-t $>$ \hyperlink{task__motor_8cpp_aee430e617bcb627c6689d4e1875f2958}{shared\-\_\-motor1\-\_\-power}
+\begin{DoxyCompactList}\small\item\em commanded state of motor2 \end{DoxyCompactList}\item 
+shared\-\_\-data$<$ int16\-\_\-t $>$ \hyperlink{task__motor_8cpp_afe80747a4d5af439097c8bee1acb816d}{shared\-\_\-motor2\-\_\-power}
+\begin{DoxyCompactList}\small\item\em commanded motor 1 power \end{DoxyCompactList}\item 
+\hypertarget{task__motor_8cpp_a9299819b12e34804bf869f2379e18e27}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{task__motor_8cpp_a9299819b12e34804bf869f2379e18e27}{shared\-\_\-motor1\-\_\-braking}}\label{task__motor_8cpp_a9299819b12e34804bf869f2379e18e27}
+
+\begin{DoxyCompactList}\small\item\em power to motor 2 \end{DoxyCompactList}\item 
+\hypertarget{task__motor_8cpp_ac72d7dd2fa4e296e1ef27d17ba8ff3b9}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{task__motor_8cpp_ac72d7dd2fa4e296e1ef27d17ba8ff3b9}{shared\-\_\-motor2\-\_\-braking}}\label{task__motor_8cpp_ac72d7dd2fa4e296e1ef27d17ba8ff3b9}
+
+\begin{DoxyCompactList}\small\item\em braking command for motor 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+this file defines a task that manages motor objects
+
+\-Revisions\-: \begin{DoxyItemize}
+\item 04-\/17-\/2014 \-E\-B created this task by copying task\-\_\-brightness.\-cpp\end{DoxyItemize}
+\-License\-: \-This file is copyright 2012 by \-J\-R \-Ridgely and released under the \-Lesser \-G\-N\-U \-Public \-License, version 2. \-It intended for educational use only, but its use is not limited thereto. 
+
+\-Definition in file \hyperlink{task__motor_8cpp_source}{task\-\_\-motor.\-cpp}.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{task__motor_8cpp_aee430e617bcb627c6689d4e1875f2958}{\index{task\-\_\-motor.\-cpp@{task\-\_\-motor.\-cpp}!shared\-\_\-motor1\-\_\-power@{shared\-\_\-motor1\-\_\-power}}
+\index{shared\-\_\-motor1\-\_\-power@{shared\-\_\-motor1\-\_\-power}!task_motor.cpp@{task\-\_\-motor.\-cpp}}
+\subsubsection[{shared\-\_\-motor1\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<$int16\-\_\-t$>$ {\bf shared\-\_\-motor1\-\_\-power}}}\label{task__motor_8cpp_aee430e617bcb627c6689d4e1875f2958}
+
+
+commanded state of motor2 
+
+state of motor 2 
+
+\-Definition at line 39 of file task\-\_\-motor.\-cpp.
+
+
+
+\-Referenced by task\-\_\-master\-::run(), and task\-\_\-motor\-::run().
+
+\hypertarget{task__motor_8cpp_a32f6a081a2279bd21982b533187ead6e}{\index{task\-\_\-motor.\-cpp@{task\-\_\-motor.\-cpp}!shared\-\_\-motor1\-\_\-state@{shared\-\_\-motor1\-\_\-state}}
+\index{shared\-\_\-motor1\-\_\-state@{shared\-\_\-motor1\-\_\-state}!task_motor.cpp@{task\-\_\-motor.\-cpp}}
+\subsubsection[{shared\-\_\-motor1\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<${\bf motor\-\_\-state\-\_\-enum}$>$ {\bf shared\-\_\-motor1\-\_\-state}}}\label{task__motor_8cpp_a32f6a081a2279bd21982b533187ead6e}
+\-These are the shared data for communicating from other tasks to \hyperlink{classtask__motor}{task\-\_\-motor}. 
+
+\-Definition at line 35 of file task\-\_\-motor.\-cpp.
+
+
+
+\-Referenced by task\-\_\-master\-::run(), and task\-\_\-motor\-::run().
+
+\hypertarget{task__motor_8cpp_afe80747a4d5af439097c8bee1acb816d}{\index{task\-\_\-motor.\-cpp@{task\-\_\-motor.\-cpp}!shared\-\_\-motor2\-\_\-power@{shared\-\_\-motor2\-\_\-power}}
+\index{shared\-\_\-motor2\-\_\-power@{shared\-\_\-motor2\-\_\-power}!task_motor.cpp@{task\-\_\-motor.\-cpp}}
+\subsubsection[{shared\-\_\-motor2\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<$int16\-\_\-t$>$ {\bf shared\-\_\-motor2\-\_\-power}}}\label{task__motor_8cpp_afe80747a4d5af439097c8bee1acb816d}
+
+
+commanded motor 1 power 
+
+power to motor 1 
+
+\-Definition at line 40 of file task\-\_\-motor.\-cpp.
+
+
+
+\-Referenced by task\-\_\-master\-::run(), and task\-\_\-motor\-::run().
+
+\hypertarget{task__motor_8cpp_ab9df4d33643276af8b1b0f7a852cb1c6}{\index{task\-\_\-motor.\-cpp@{task\-\_\-motor.\-cpp}!shared\-\_\-motor2\-\_\-state@{shared\-\_\-motor2\-\_\-state}}
+\index{shared\-\_\-motor2\-\_\-state@{shared\-\_\-motor2\-\_\-state}!task_motor.cpp@{task\-\_\-motor.\-cpp}}
+\subsubsection[{shared\-\_\-motor2\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<${\bf motor\-\_\-state\-\_\-enum}$>$ {\bf shared\-\_\-motor2\-\_\-state}}}\label{task__motor_8cpp_ab9df4d33643276af8b1b0f7a852cb1c6}
+
+
+state of motor 1 
+
+the commanded state of motor1 motor\-\_\-states enum declared in \hyperlink{shares_8h}{shares.\-h} motor states can be \-R\-U\-N or \-B\-R\-A\-K\-E 
+
+\-Definition at line 38 of file task\-\_\-motor.\-cpp.
+
+
+
+\-Referenced by task\-\_\-master\-::run(), and task\-\_\-motor\-::run().
+

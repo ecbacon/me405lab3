@@ -1,0 +1,174 @@
+\hypertarget{classmotor}{\section{motor \-Class \-Reference}
+\label{classmotor}\index{motor@{motor}}
+}
+
+
+\-This class should run a motor driver for an \-A\-V\-R processor.  
+
+
+
+
+{\ttfamily \#include $<$motor.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmotor_a11438fa0aaec2da59468e039d71b9597}{motor} (volatile uint8\-\_\-t $\ast$, uint8\-\_\-t, volatile uint8\-\_\-t $\ast$, uint8\-\_\-t, uint8\-\_\-t, uint8\-\_\-t, volatile uint8\-\_\-t $\ast$, volatile uint16\-\_\-t $\ast$, emstream $\ast$=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-This constructor sets up an motor. \end{DoxyCompactList}\item 
+void \hyperlink{classmotor_a168a159eebb68c7a47cd4153e03c030c}{set\-\_\-power} (int16\-\_\-t)
+\begin{DoxyCompactList}\small\item\em \-This function sets the power level for the motor. \end{DoxyCompactList}\item 
+void \hyperlink{classmotor_abff6d2ccc592902ac6472d8078a897fa}{brake} (uint16\-\_\-t)
+\begin{DoxyCompactList}\small\item\em \-This function applies damping to the motor to brake. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmotor_a618a4f3836e6d7e204469f38a6036d6f}{emstream $\ast$ \hyperlink{classmotor_a618a4f3836e6d7e204469f38a6036d6f}{ptr\-\_\-to\-\_\-serial}}\label{classmotor_a618a4f3836e6d7e204469f38a6036d6f}
+
+\begin{DoxyCompactList}\small\item\em use this pointer to the serial port for debug info \end{DoxyCompactList}\item 
+\hypertarget{classmotor_a0e87c86a28b613f1b1888103d2dfe716}{volatile uint8\-\_\-t $\ast$ {\bfseries mc\-\_\-port\-\_\-md}}\label{classmotor_a0e87c86a28b613f1b1888103d2dfe716}
+
+\item 
+\hypertarget{classmotor_afc7500a2e5925ad1326b1bfd7dc845b2}{volatile uint16\-\_\-t $\ast$ {\bfseries ocr\-\_\-md}}\label{classmotor_afc7500a2e5925ad1326b1bfd7dc845b2}
+
+\item 
+\hypertarget{classmotor_a76a903d8d805d8a27af73a4ce543fe40}{uint8\-\_\-t {\bfseries mc\-\_\-bit\-\_\-a\-\_\-md}}\label{classmotor_a76a903d8d805d8a27af73a4ce543fe40}
+
+\item 
+\hypertarget{classmotor_ad57ef698e3ba68c45a2318af2f7151bc}{uint8\-\_\-t {\bfseries mc\-\_\-bit\-\_\-b\-\_\-md}}\label{classmotor_ad57ef698e3ba68c45a2318af2f7151bc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class should run a motor driver for an \-A\-V\-R processor. 
+
+\-The motor\-\_\-driver class. contains member data that sets the various bits needed to create the motor driver. \-Also contains functions for setting the motor power or braking the motor. 
+
+\-Definition at line 43 of file motor.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmotor_a11438fa0aaec2da59468e039d71b9597}{\index{motor@{motor}!motor@{motor}}
+\index{motor@{motor}!motor@{motor}}
+\subsubsection[{motor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf motor\-::motor} (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\-\_\-t $\ast$}]{pwm\-\_\-ddr, }
+\item[{uint8\-\_\-t}]{pwm\-\_\-bit, }
+\item[{volatile uint8\-\_\-t $\ast$}]{mc\-\_\-ddr, }
+\item[{uint8\-\_\-t}]{mc\-\_\-bit\-\_\-a, }
+\item[{uint8\-\_\-t}]{mc\-\_\-bit\-\_\-b, }
+\item[{uint8\-\_\-t}]{mc\-\_\-bit\-\_\-diag, }
+\item[{volatile uint8\-\_\-t $\ast$}]{mc\-\_\-port, }
+\item[{volatile uint16\-\_\-t $\ast$}]{ocr, }
+\item[{emstream $\ast$}]{p\-\_\-serial\-\_\-port = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)}}\label{classmotor_a11438fa0aaec2da59468e039d71b9597}
+
+
+\-This constructor sets up an motor. 
+
+motor function drives the \-P\-W\-M to the motor. \-The function {\ttfamily \hyperlink{classmotor_a168a159eebb68c7a47cd4153e03c030c}{set\-\_\-power()}} tells the motor how much torque to auint8\-\_\-tpply. \-Sets the polarity. \-The function {\ttfamily \hyperlink{classmotor_abff6d2ccc592902ac6472d8078a897fa}{brake()}} will apply damping to the motor to stop the motor.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em p\-\_\-serial\-\_\-port} & \-A pointer to the serial port which writes debugging info. \\
+\hline
+{\em pwm\-\_\-ddr} & \-A pointer to the \-P\-W\-M data direction register \\
+\hline
+{\em pwm\-\_\-bit} & \-A pointer to the \-P\-W\-M settings bit \\
+\hline
+{\em mc\-\_\-ddr} & \-A pointer to the motor controller data direction register \\
+\hline
+{\em mc\-\_\-bit\-\_\-a} & \-The first motor controller settings bit \\
+\hline
+{\em mc\-\_\-bit\-\_\-b} & \-The second motor controller settings bit \\
+\hline
+{\em mc\-\_\-bit\-\_\-diag} & \-The motor controller output enable and diagnostic register \\
+\hline
+{\em mc\-\_\-port} & \-The motor controller port \\
+\hline
+{\em ocr} & \-The compare register for setting the \-P\-W\-M duty cycle \\
+\hline
+{\em p\-\_\-serial\-\_\-port} & \-The debug output port \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 50 of file motor.\-cpp.
+
+
+
+\-References brake(), and set\-\_\-bit().
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmotor_abff6d2ccc592902ac6472d8078a897fa}{\index{motor@{motor}!brake@{brake}}
+\index{brake@{brake}!motor@{motor}}
+\subsubsection[{brake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf motor\-::brake} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{power}
+\end{DoxyParamCaption}
+)}}\label{classmotor_abff6d2ccc592902ac6472d8078a897fa}
+
+
+\-This function applies damping to the motor to brake. 
+
+\-It creates a short between the two leads of the motor. \-Can vary the strength of damping 
+\begin{DoxyParams}{\-Parameters}
+{\em power} & \-The power of the damping applied to the brake. 0 is freewheeling, 1023 is max damping \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+
+\-Definition at line 132 of file motor.\-cpp.
+
+
+
+\-References set\-\_\-bit().
+
+
+
+\-Referenced by motor(), and task\-\_\-motor\-::run().
+
+\hypertarget{classmotor_a168a159eebb68c7a47cd4153e03c030c}{\index{motor@{motor}!set\-\_\-power@{set\-\_\-power}}
+\index{set\-\_\-power@{set\-\_\-power}!motor@{motor}}
+\subsubsection[{set\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf motor\-::set\-\_\-power} (
+\begin{DoxyParamCaption}
+\item[{int16\-\_\-t}]{power}
+\end{DoxyParamCaption}
+)}}\label{classmotor_a168a159eebb68c7a47cd4153e03c030c}
+
+
+\-This function sets the power level for the motor. 
+
+positive input drives positive torque and negative drives negative torque 
+\begin{DoxyParams}{\-Parameters}
+{\em power} & power level from -\/1023 to +1023. negative and positive indicate direction of motor spin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+
+\-Definition at line 98 of file motor.\-cpp.
+
+
+
+\-References set\-\_\-bit().
+
+
+
+\-Referenced by task\-\_\-motor\-::run().
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{motor_8h}{motor.\-h}\item 
+\hyperlink{motor_8cpp}{motor.\-cpp}\end{DoxyCompactItemize}

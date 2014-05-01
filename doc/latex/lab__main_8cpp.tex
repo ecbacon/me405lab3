@@ -1,0 +1,70 @@
+\hypertarget{lab__main_8cpp}{\section{lab\-\_\-main.\-cpp \-File \-Reference}
+\label{lab__main_8cpp}\index{lab\-\_\-main.\-cpp@{lab\-\_\-main.\-cpp}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$avr/io.\-h$>$}\*
+{\ttfamily \#include $<$avr/wdt.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Free\-R\-T\-O\-S.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}task.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}queue.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}croutine.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}rs232int.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}time\-\_\-stamp.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}frt\-\_\-task.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}frt\-\_\-text\-\_\-queue.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}frt\-\_\-queue.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}frt\-\_\-shared\-\_\-data.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}shares.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}task\-\_\-master.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}task\-\_\-user.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}task\-\_\-motor.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}task\-\_\-adc.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+frt\-\_\-text\-\_\-queue \hyperlink{lab__main_8cpp_a4c623cb3c8a60e67138367480c1ee0d2}{print\-\_\-ser\-\_\-queue} (32, \-N\-U\-L\-L, 10)
+\item 
+int \hyperlink{lab__main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This file contains the \hyperlink{lab__main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main()} code for a program which runs the \-M\-E405 board for \-M\-E405 labs.
+
+\-Revisions\-: \begin{DoxyItemize}
+\item 04-\/17-\/2014 \-E\-B copied this from \-J\-R\-R's lab1\-\_\-main\end{DoxyItemize}
+\-License\-: \-This file is copyright 2012 by \-J\-R \-Ridgely and released under the \-Lesser \-G\-N\-U \-Public \-License, version 2. \-It intended for educational use only, but its use is not limited thereto. 
+
+\-Definition in file \hyperlink{lab__main_8cpp_source}{lab\-\_\-main.\-cpp}.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{lab__main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{\index{lab\-\_\-main.\-cpp@{lab\-\_\-main.\-cpp}!main@{main}}
+\index{main@{main}!lab_main.cpp@{lab\-\_\-main.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lab__main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+\-The main function sets up the \-R\-T\-O\-S. \-Some test tasks are created. \-Then the scheduler is started up; the scheduler runs until power is turned off or there's a reset. \begin{DoxyReturn}{\-Returns}
+\-This is a real-\/time microcontroller program which doesn't return. \-Ever. 
+\end{DoxyReturn}
+
+
+\-Definition at line 73 of file lab\-\_\-main.\-cpp.
+
+\hypertarget{lab__main_8cpp_a4c623cb3c8a60e67138367480c1ee0d2}{\index{lab\-\_\-main.\-cpp@{lab\-\_\-main.\-cpp}!print\-\_\-ser\-\_\-queue@{print\-\_\-ser\-\_\-queue}}
+\index{print\-\_\-ser\-\_\-queue@{print\-\_\-ser\-\_\-queue}!lab_main.cpp@{lab\-\_\-main.\-cpp}}
+\subsubsection[{print\-\_\-ser\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}frt\-\_\-text\-\_\-queue {\bf print\-\_\-ser\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{32}]{, }
+\item[{\-N\-U\-L\-L}]{, }
+\item[{10}]{}
+\end{DoxyParamCaption}
+)}}\label{lab__main_8cpp_a4c623cb3c8a60e67138367480c1ee0d2}
+\-This is a print queue, descended from {\ttfamily emstream} so that things can be printed into the queue using the \char`\"{}$<$$<$\char`\"{} operator and they'll come out the other end as a stream of characters. \-It's used by tasks that send things to the user interface task to be printed. 
+
+\-Referenced by task\-\_\-user\-::run().
+

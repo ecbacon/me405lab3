@@ -1,0 +1,137 @@
+\hypertarget{shares_8h}{\section{shares.\-h \-File \-Reference}
+\label{shares_8h}\index{shares.\-h@{shares.\-h}}
+}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{shares_8h_a691d837edb37a31cc16afc22cebba884}{motor\-\_\-state\-\_\-enum} \{ {\bfseries \-B\-R\-A\-K\-E} = 0, 
+{\bfseries \-R\-U\-N}
+ \}
+\item 
+enum \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} \{ {\bfseries \-O\-F\-F} = 0, 
+{\bfseries \-R\-E\-A\-D\-\_\-\-O\-N\-C\-E}, 
+{\bfseries \-R\-E\-A\-D\-\_\-\-A\-V\-E\-R\-A\-G\-E}, 
+{\bfseries \-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-N}
+ \}
+\begin{DoxyCompactList}\small\item\em braking cmd for motor 2 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{shares_8h_aa7d8f7a1c41bee143392fe322e8a07b2}{frt\-\_\-text\-\_\-queue {\bfseries print\-\_\-ser\-\_\-queue}}\label{shares_8h_aa7d8f7a1c41bee143392fe322e8a07b2}
+
+\item 
+shared\-\_\-data$<$ \hyperlink{shares_8h_a691d837edb37a31cc16afc22cebba884}{motor\-\_\-state\-\_\-enum} $>$ \hyperlink{shares_8h_a32f6a081a2279bd21982b533187ead6e}{shared\-\_\-motor1\-\_\-state}
+\item 
+shared\-\_\-data$<$ \hyperlink{shares_8h_a691d837edb37a31cc16afc22cebba884}{motor\-\_\-state\-\_\-enum} $>$ \hyperlink{shares_8h_ab9df4d33643276af8b1b0f7a852cb1c6}{shared\-\_\-motor2\-\_\-state}
+\begin{DoxyCompactList}\small\item\em state of motor 1 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_aee430e617bcb627c6689d4e1875f2958}{shared\-\_\-data$<$ int16\-\_\-t $>$ \hyperlink{shares_8h_aee430e617bcb627c6689d4e1875f2958}{shared\-\_\-motor1\-\_\-power}}\label{shares_8h_aee430e617bcb627c6689d4e1875f2958}
+
+\begin{DoxyCompactList}\small\item\em state of motor 2 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_afe80747a4d5af439097c8bee1acb816d}{shared\-\_\-data$<$ int16\-\_\-t $>$ \hyperlink{shares_8h_afe80747a4d5af439097c8bee1acb816d}{shared\-\_\-motor2\-\_\-power}}\label{shares_8h_afe80747a4d5af439097c8bee1acb816d}
+
+\begin{DoxyCompactList}\small\item\em power to motor 1 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_a9299819b12e34804bf869f2379e18e27}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{shares_8h_a9299819b12e34804bf869f2379e18e27}{shared\-\_\-motor1\-\_\-braking}}\label{shares_8h_a9299819b12e34804bf869f2379e18e27}
+
+\begin{DoxyCompactList}\small\item\em power to motor 2 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_ac72d7dd2fa4e296e1ef27d17ba8ff3b9}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{shares_8h_ac72d7dd2fa4e296e1ef27d17ba8ff3b9}{shared\-\_\-motor2\-\_\-braking}}\label{shares_8h_ac72d7dd2fa4e296e1ef27d17ba8ff3b9}
+
+\begin{DoxyCompactList}\small\item\em braking command for motor 1 \end{DoxyCompactList}\item 
+shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{shares_8h_a9dd11e117cf5affe7c055399a46ff8d9}{shared\-\_\-adc0\-\_\-state}
+\item 
+\hypertarget{shares_8h_a46ffde29d70504cfb0d02d58c5a28303}{shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{shares_8h_a46ffde29d70504cfb0d02d58c5a28303}{shared\-\_\-adc1\-\_\-state}}\label{shares_8h_a46ffde29d70504cfb0d02d58c5a28303}
+
+\begin{DoxyCompactList}\small\item\em state of adc0 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_a73d353a8c3af19ff597f903ce0885031}{shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{shares_8h_a73d353a8c3af19ff597f903ce0885031}{shared\-\_\-adc2\-\_\-state}}\label{shares_8h_a73d353a8c3af19ff597f903ce0885031}
+
+\begin{DoxyCompactList}\small\item\em state of adc1 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_a48039483bfbf1c64d7d4d0ae48929d47}{shared\-\_\-data$<$ \hyperlink{shares_8h_a709454abeafb4f97052a3e005ba42f46}{adc\-\_\-state\-\_\-enum} $>$ \hyperlink{shares_8h_a48039483bfbf1c64d7d4d0ae48929d47}{shared\-\_\-adc3\-\_\-state}}\label{shares_8h_a48039483bfbf1c64d7d4d0ae48929d47}
+
+\begin{DoxyCompactList}\small\item\em state of adc2 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_af39bbda9c236c19714643a2d5b3f658a}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{shares_8h_af39bbda9c236c19714643a2d5b3f658a}{shared\-\_\-adc0\-\_\-value}}\label{shares_8h_af39bbda9c236c19714643a2d5b3f658a}
+
+\begin{DoxyCompactList}\small\item\em state of adc3 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_af1e83f6c130fa15c4773d544c5d4da00}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{shares_8h_af1e83f6c130fa15c4773d544c5d4da00}{shared\-\_\-adc1\-\_\-value}}\label{shares_8h_af1e83f6c130fa15c4773d544c5d4da00}
+
+\begin{DoxyCompactList}\small\item\em reading from adc0 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_ae600b494e1bf49c9903d60ab15d1fb35}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{shares_8h_ae600b494e1bf49c9903d60ab15d1fb35}{shared\-\_\-adc2\-\_\-value}}\label{shares_8h_ae600b494e1bf49c9903d60ab15d1fb35}
+
+\begin{DoxyCompactList}\small\item\em reading from adc1 \end{DoxyCompactList}\item 
+\hypertarget{shares_8h_a83378a66e1c6d03fc2c68b028a52fb2c}{shared\-\_\-data$<$ uint16\-\_\-t $>$ \hyperlink{shares_8h_a83378a66e1c6d03fc2c68b028a52fb2c}{shared\-\_\-adc3\-\_\-value}}\label{shares_8h_a83378a66e1c6d03fc2c68b028a52fb2c}
+
+\begin{DoxyCompactList}\small\item\em reading from adc2 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This file contains extern declarations for queues and other inter-\/task data communication objects used in a \-M\-E405/507/\-Free\-R\-T\-O\-S project.
+
+\-Revisions\-: \begin{DoxyItemize}
+\item 09-\/30-\/2012 \-J\-R\-R \-Original file was a one-\/file demonstration with two tasks \item 10-\/05-\/2012 \-J\-R\-R \-Split into multiple files, one for each task plus a main one \item 10-\/29-\/2012 \-J\-R\-R \-Reorganized with global queue and shared data references \item 04-\/17-\/2014 \-E\-B added shared data for lab 3 {\ttfamily task\-\_\-motor()} \end{DoxyItemize}
+\-License\-: \-This file is copyright 2012 by \-J\-R \-Ridgely and released under the \-Lesser \-G\-N\-U \-Public \-License, version 2. \-It intended for educational use only, but its use is not limited thereto. 
+
+\-Definition in file \hyperlink{shares_8h_source}{shares.\-h}.
+
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{shares_8h_a709454abeafb4f97052a3e005ba42f46}{\index{shares.\-h@{shares.\-h}!adc\-\_\-state\-\_\-enum@{adc\-\_\-state\-\_\-enum}}
+\index{adc\-\_\-state\-\_\-enum@{adc\-\_\-state\-\_\-enum}!shares.h@{shares.\-h}}
+\subsubsection[{adc\-\_\-state\-\_\-enum}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf adc\-\_\-state\-\_\-enum}}}\label{shares_8h_a709454abeafb4f97052a3e005ba42f46}
+
+
+braking cmd for motor 2 
+
+\-Enum for commanding adc state 
+
+\-Definition at line 66 of file shares.\-h.
+
+\hypertarget{shares_8h_a691d837edb37a31cc16afc22cebba884}{\index{shares.\-h@{shares.\-h}!motor\-\_\-state\-\_\-enum@{motor\-\_\-state\-\_\-enum}}
+\index{motor\-\_\-state\-\_\-enum@{motor\-\_\-state\-\_\-enum}!shares.h@{shares.\-h}}
+\subsubsection[{motor\-\_\-state\-\_\-enum}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf motor\-\_\-state\-\_\-enum}}}\label{shares_8h_a691d837edb37a31cc16afc22cebba884}
+shared data to send motor state/power messages to motor\-\_\-task from other tasks \-Enum for commanding motor state 
+
+\-Definition at line 48 of file shares.\-h.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{shares_8h_a9dd11e117cf5affe7c055399a46ff8d9}{\index{shares.\-h@{shares.\-h}!shared\-\_\-adc0\-\_\-state@{shared\-\_\-adc0\-\_\-state}}
+\index{shared\-\_\-adc0\-\_\-state@{shared\-\_\-adc0\-\_\-state}!shares.h@{shares.\-h}}
+\subsubsection[{shared\-\_\-adc0\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<${\bf adc\-\_\-state\-\_\-enum}$>$ {\bf shared\-\_\-adc0\-\_\-state}}}\label{shares_8h_a9dd11e117cf5affe7c055399a46ff8d9}
+shared adc data
+
+\-These are the shared data for communicating \-A\-D\-C data to and fro among tasks. 
+
+\-Definition at line 35 of file task\-\_\-adc.\-cpp.
+
+
+
+\-Referenced by task\-\_\-adc\-::run().
+
+\hypertarget{shares_8h_a32f6a081a2279bd21982b533187ead6e}{\index{shares.\-h@{shares.\-h}!shared\-\_\-motor1\-\_\-state@{shared\-\_\-motor1\-\_\-state}}
+\index{shared\-\_\-motor1\-\_\-state@{shared\-\_\-motor1\-\_\-state}!shares.h@{shares.\-h}}
+\subsubsection[{shared\-\_\-motor1\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<${\bf motor\-\_\-state\-\_\-enum}$>$ {\bf shared\-\_\-motor1\-\_\-state}}}\label{shares_8h_a32f6a081a2279bd21982b533187ead6e}
+shared motor data
+
+\-These are the shared data for communicating from other tasks to \hyperlink{classtask__motor}{task\-\_\-motor}. 
+
+\-Definition at line 35 of file task\-\_\-motor.\-cpp.
+
+
+
+\-Referenced by task\-\_\-master\-::run(), and task\-\_\-motor\-::run().
+
+\hypertarget{shares_8h_ab9df4d33643276af8b1b0f7a852cb1c6}{\index{shares.\-h@{shares.\-h}!shared\-\_\-motor2\-\_\-state@{shared\-\_\-motor2\-\_\-state}}
+\index{shared\-\_\-motor2\-\_\-state@{shared\-\_\-motor2\-\_\-state}!shares.h@{shares.\-h}}
+\subsubsection[{shared\-\_\-motor2\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-data$<${\bf motor\-\_\-state\-\_\-enum}$>$ {\bf shared\-\_\-motor2\-\_\-state}}}\label{shares_8h_ab9df4d33643276af8b1b0f7a852cb1c6}
+
+
+state of motor 1 
+
+the commanded state of motor1 motor\-\_\-states enum declared in \hyperlink{shares_8h}{shares.\-h} motor states can be \-R\-U\-N or \-B\-R\-A\-K\-E 
+
+\-Definition at line 38 of file task\-\_\-motor.\-cpp.
+
+
+
+\-Referenced by task\-\_\-master\-::run(), and task\-\_\-motor\-::run().
+

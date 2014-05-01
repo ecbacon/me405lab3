@@ -1,0 +1,80 @@
+\hypertarget{classtask__adc}{\section{task\-\_\-adc \-Class \-Reference}
+\label{classtask__adc}\index{task\-\_\-adc@{task\-\_\-adc}}
+}
+
+
+\-This task runs \-A\-D\-Cs.  
+
+
+
+
+{\ttfamily \#include $<$task\-\_\-adc.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtask__adc_a277193acbf12b557e38543031a8ef14d}{task\-\_\-adc} (const char $\ast$, unsigned port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E, size\-\_\-t, emstream $\ast$)
+\item 
+void \hyperlink{classtask__adc_a3ef916a139b496f8edfd56fb89bbf555}{run} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This task runs \-A\-D\-Cs. 
+
+\-An adc object is instantiated. \-A\-D\-C channels can be \char`\"{}turned on/off\char`\"{} via shared data state changes, then their readings can be read from shared data. 
+
+\-Definition at line 41 of file task\-\_\-adc.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtask__adc_a277193acbf12b557e38543031a8ef14d}{\index{task\-\_\-adc@{task\-\_\-adc}!task\-\_\-adc@{task\-\_\-adc}}
+\index{task\-\_\-adc@{task\-\_\-adc}!task_adc@{task\-\_\-adc}}
+\subsubsection[{task\-\_\-adc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf task\-\_\-adc\-::task\-\_\-adc} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\-\_\-name, }
+\item[{unsigned port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}]{a\-\_\-priority, }
+\item[{size\-\_\-t}]{a\-\_\-stack\-\_\-size, }
+\item[{emstream $\ast$}]{p\-\_\-ser\-\_\-dev}
+\end{DoxyParamCaption}
+)}}\label{classtask__adc_a277193acbf12b557e38543031a8ef14d}
+\-This constructor creates a task which controls the brightness of an \-L\-E\-D using input from an \-A/\-D converter. \-The main job of this constructor is to call the constructor of parent class ({\ttfamily frt\-\_\-task} ); the parent's constructor the work. 
+\begin{DoxyParams}{\-Parameters}
+{\em a\-\_\-name} & \-A character string which will be the name of this task \\
+\hline
+{\em a\-\_\-priority} & \-The priority at which this task will initially run (default\-: 0) \\
+\hline
+{\em a\-\_\-stack\-\_\-size} & \-The size of this task's stack in bytes (default\-: config\-M\-I\-N\-I\-M\-A\-L\-\_\-\-S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E) \\
+\hline
+{\em p\-\_\-ser\-\_\-dev} & \-Pointer to a serial device (port, radio, \-S\-D card, etc.) which can be used by this task to communicate (default\-: \-N\-U\-L\-L) \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 56 of file task\-\_\-adc.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtask__adc_a3ef916a139b496f8edfd56fb89bbf555}{\index{task\-\_\-adc@{task\-\_\-adc}!run@{run}}
+\index{run@{run}!task_adc@{task\-\_\-adc}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf task\-\_\-adc\-::run} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classtask__adc_a3ef916a139b496f8edfd56fb89bbf555}
+\-This method is called once by the \-R\-T\-O\-S scheduler. \-Each time around the for (;;) loop, it reads the shared adc settings and, if necessary, sets adc output to the shared data that exposes it to other tasks 
+
+\-Definition at line 73 of file task\-\_\-adc.\-cpp.
+
+
+
+\-References adc\-::read\-\_\-average(), adc\-::read\-\_\-median(), adc\-::read\-\_\-once(), shared\-\_\-adc0\-\_\-state, shared\-\_\-adc0\-\_\-value, shared\-\_\-adc1\-\_\-state, shared\-\_\-adc1\-\_\-value, shared\-\_\-adc2\-\_\-state, shared\-\_\-adc2\-\_\-value, shared\-\_\-adc3\-\_\-state, and shared\-\_\-adc3\-\_\-value.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{task__adc_8h}{task\-\_\-adc.\-h}\item 
+\hyperlink{task__adc_8cpp}{task\-\_\-adc.\-cpp}\end{DoxyCompactItemize}

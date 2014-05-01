@@ -1,0 +1,95 @@
+\hypertarget{adc_8cpp}{\section{adc.\-cpp \-File \-Reference}
+\label{adc_8cpp}\index{adc.\-cpp@{adc.\-cpp}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$avr/io.\-h$>$}\*
+{\ttfamily \#include \char`\"{}rs232int.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}adc.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{adc_8cpp_a78f316da3a87bf72cb1647786b64bf0e}{\#define {\bfseries \-M\-A\-X\-\_\-\-S\-A\-M\-P\-L\-E\-S}~62}\label{adc_8cpp_a78f316da3a87bf72cb1647786b64bf0e}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{adc_8cpp_a67f19a23c6bb69d8c20f4f828a3d70e5}{compare} (const void $\ast$num1, const void $\ast$num2)
+\begin{DoxyCompactList}\small\item\em \-This is a function that compares two numbers for sorting-\/-\/ used in read\-\_\-median. \end{DoxyCompactList}\item 
+emstream \& \hyperlink{adc_8cpp_afb33ca9fe94765ee57079e7feb03f975}{operator$<$$<$} (emstream \&serpt, \hyperlink{classadc}{adc} \&a2d)
+\begin{DoxyCompactList}\small\item\em \-This overloaded operator \char`\"{}prints the A/\-D converter.\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This file contains a very simple \-A/\-D converter driver.
+
+\-Revisions\-: \begin{DoxyItemize}
+\item 01-\/15-\/2008 \-J\-R\-R \-Original (somewhat useful) file \item 10-\/11-\/2012 \-J\-R\-R \-Less original, more useful file with \-Free\-R\-T\-O\-S mutex added \item 10-\/12-\/2012 \-J\-R\-R \-There was a bug in the mutex code, and it has been fixed \item 04-\/09-\/2014 \-E\-B, \-M\-B, \-J\-F, \-S\-O \-Fixed the obfuscation added by \-J\-R\-R \item 04-\/16-\/2014 \-E\-B added {\ttfamily read\-\_\-median()} \end{DoxyItemize}
+\-License\-: \-This file is copyright 2012 by \-J\-R \-Ridgely and released under the \-Lesser \-G\-N\-U \-Public \-License, version 2. \-It intended for educational use only, but its use is not limited thereto. 
+
+\-Definition in file \hyperlink{adc_8cpp_source}{adc.\-cpp}.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{adc_8cpp_a67f19a23c6bb69d8c20f4f828a3d70e5}{\index{adc.\-cpp@{adc.\-cpp}!compare@{compare}}
+\index{compare@{compare}!adc.cpp@{adc.\-cpp}}
+\subsubsection[{compare}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf compare} (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{num1, }
+\item[{const void $\ast$}]{num2}
+\end{DoxyParamCaption}
+)}}\label{adc_8cpp_a67f19a23c6bb69d8c20f4f828a3d70e5}
+
+
+\-This is a function that compares two numbers for sorting-\/-\/ used in read\-\_\-median. 
+
+\-This class should run the \-A/\-D converter on an \-A\-V\-R processor.
+
+\-In {\ttfamily read\-\_\-median()}, the median value of an array of \-A\-D\-C readings is found. to find the median, the array must be sorted. the stdlib {\ttfamily qsort()} function requires a function that performs the comparison on whatever data type it is sorting. \-This is that function.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em num1} & number to compare \\
+\hline
+{\em num2} & the other number compared to \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 47 of file adc.\-cpp.
+
+
+
+\-Referenced by adc\-::read\-\_\-median().
+
+\hypertarget{adc_8cpp_afb33ca9fe94765ee57079e7feb03f975}{\index{adc.\-cpp@{adc.\-cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!adc.cpp@{adc.\-cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}emstream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{emstream \&}]{serpt, }
+\item[{{\bf adc} \&}]{a2d}
+\end{DoxyParamCaption}
+)}}\label{adc_8cpp_afb33ca9fe94765ee57079e7feb03f975}
+
+
+\-This overloaded operator \char`\"{}prints the A/\-D converter.\char`\"{}. 
+
+\-This operator allows the user to show current readings from all the \-A/\-D channels. 
+\begin{DoxyParams}{\-Parameters}
+{\em serpt} & \-Reference to a serial port to which the printout will be printed \\
+\hline
+{\em a2d} & \-Reference to the \-A/\-D driver which is being printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A reference to the same serial device on which we write information. \-This is used to string together things to write with \char`\"{}$<$$<$\char`\"{} operators 
+\end{DoxyReturn}
+
+
+\-Definition at line 179 of file adc.\-cpp.
+
+
+
+\-References adc\-::read\-\_\-once().
+
