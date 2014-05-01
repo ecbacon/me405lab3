@@ -1,0 +1,23 @@
+Committing:
+
+# stage a file, ie add it to list that are to be committed
+
+	git add <filename>
+
+#stage all files
+
+	git add -A
+
+#commit all staged files, add comment
+
+	git commit -m "MAH FILEZ R N UR BASE"
+
+#send files to github.com repo
+
+	git push origin master
+
+#set the online repo address
+
+	git remote add origin https://github.com/<user>/<repo-name>
+
+
