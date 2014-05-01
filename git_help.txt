@@ -1,66 +1,28 @@
 #####################
-# STARTING A PROJECT
+# DOWNLOAD A PROJECT:
 #####################
 
 #initializing a repo in current dir
 
 	git init
 
-#forking: FIRST FORK PROJECT ON GITHUB
-#will save entire project to new directory of same name in pwd
+#get a repository
 
 	git clone https://github.com/<user>/<proj-to-fork>
-
-#save original repo (the one you just forked) as "upstream", not "origin"
-
-	git remote add upstream https://github.com/<user>/<proj-to-fork>
-
-#update from upstream, without touching your files
-	
-	git fetch upstream
-
-#merge upstream changes into your files
-
-	git merge upstream/master
-
-#check out repo
-
-	git checkout <repo>
 
 
 ############
 # UPLOADING:
 ############
 
-# stage a file, ie add it to list that are to be committed
-
-	git add <filename>
-
-#stage all files
+#stage all files (step 1 of upload)
 
 	git add -A
 
-#commit all staged files, add comment
+#commit all staged files, add comment (step 2 of upload)
 
 	git commit -m "MAH FILEZ R N UR BASE"
 
-#send files to github.com repo
+#send files to github.com repo	(final step of upload)
 
 	git push origin master
-
-#set the online repo address
-
-	git remote add origin https://github.com/<user>/<repo-name>
-
-###############
-# DOWNLOADING:
-###############
-
-#pull master project from online
-
-	git pull origin master
-
-#pull all branches of project too
-
-	git fetch
-	git checkout <branch-name>
